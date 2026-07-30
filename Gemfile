@@ -12,4 +12,4 @@ gem "minitest", "~> 5.16"
 
 gem "rubocop", "~> 1.21"
 
-gem "the_local", github: "tylercschneider/the_local"
+gem "the_local", github: "DYB-Development/the_local", ref: "e5ab947b194652d57d31f29231250a706755b9be"
