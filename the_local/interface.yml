@@ -1,0 +1,22 @@
+scope: self-describing metrics — defining a Stat, reading it through a pluggable source, and the normalized Result it returns
+
+install:
+  - gem "readout"
+  - require "readout"
+
+develop:
+  - Readout::Stat.new
+  - Readout::Stat#read
+  - Readout::Stat#key
+  - Readout::Stat#title
+  - Readout::Stat#definition
+  - Readout::Stat#calculation
+  - Readout::Stat#unit
+  - Readout::Stat#timeframe
+  - Readout::Result.new
+
+sources:
+  - lib/readout.rb
+  - lib/readout/stat.rb
+  - lib/readout/result.rb
+  - readout.gemspec
