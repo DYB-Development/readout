@@ -35,11 +35,19 @@ Use this local whenever code needs a named, explained metric value.
    returns a `Readout::Result`; a lambda works:
 
    ```ruby
-   source = ->(inputs) { Readout::Result.new(value: 0.42, shape: :scalar, as_of: Time.now, exact: true) }
+   source = ->(inputs) do
+     Readout::Result.new(
+       value: inputs[:won].fdiv(inputs[:qualified]),
+       shape: :scalar,
+       as_of: Time.now,
+       exact: true
+     )
+   end
    ```
 
    Stat does not check what the source returns, so the source must build the
-   `Readout::Result` itself.
+   `Readout::Result` itself. readout accepts any object for `shape`, `as_of` and
+   `exact`, so ask the developer which values the project uses for `shape`.
 2. Ask the developer where the number comes from, and put that lookup inside the
    source. The source is the only place that knows where the number comes from.
 3. Build the Stat with its description and the source:

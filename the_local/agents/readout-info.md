@@ -34,7 +34,9 @@ develop local.
 ## Conventions
 
 - A **Stat** is one metric: a key plus its title, definition, calculation, unit
-  and timeframe, and the source it reads from.
+  and timeframe, and the source it reads from. Only the key is required.
+- Reading a Stat hands its inputs to the source unchanged and returns whatever
+  the source returns. readout itself computes nothing.
 - The **definition** says what the metric captures, and the **calculation** says
   how its value is computed, both in plain English.
 - A **source** is any object that responds to `call(inputs)` and returns a Result.
