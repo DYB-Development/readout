@@ -6,6 +6,12 @@ All notable changes to this project are documented here, following
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-09-26
+
+### Changed
+- readout's info, install and develop agents are now written by the_local's
+  authoring task instead of by hand.
+
 ## [0.2.0] - 2026-09-25
 
 ### Added
